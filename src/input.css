@@ -12,11 +12,28 @@ body {
 }
 
 .navbar {
-  @apply absolute border border-primary bg-slate-200 shadow-xl right-2 top-16 w-1/2 flex-col md:items-center py-3 px-5 text-center md:static md:flex md:flex-row  md:shadow-none md:bg-inherit md:p-0 md:w-max md:border-none transition-all duration-500;
+  @apply absolute shadow-lg right-0 top-full w-1/2 flex-col py-3 px-5 text-center transition-all duration-500 bg-white md:flex md:flex-row md:static md:py-0 md:px-0 md:justify-end md:bg-opacity-0 md:shadow-none;
+}
+
+.navbar > li {
+  @apply md:bg-transparent md:rounded-full md:mx-1;
+}
+
+.navbar > li:first-child {
+  @apply md:ml-0;
+}
+
+.navbar > li:last-child {
+  @apply md:mr-0;
 }
 
 .nav-link {
-  @apply block rounded-xl py-2 font-medium bg-sky-800 duration-300 ease-in-out transition-all my-3 text-white hover:bg-primary hover:rounded-3xl active:bg-primary md:px-4 md:py-2 md:my-0 md:bg-inherit md:text-dark md:hover:bg-primary md:mx-1 md:hover:text-white md:rounded-full md:text-sm md:font-medium;
+  @apply block font-medium py-2 duration-300 my-3 active:text-primary hover:text-primary md:my-0 md:px-2 md:text-sm;
+}
+
+.nav-scrooled {
+  @apply shadow;
+  backdrop-filter: blur(5px);
 }
 
 .hamburger-line {
@@ -36,5 +53,21 @@ body {
 }
 
 .sosmed-icon {
-  @apply flex p-3 border border-slate-300 rounded-full hover:border-secondary hover:bg-secondary hover:text-white   active:border-secondary active:bg-secondary active:text-white transition-all duration-200 mx-1;
+  @apply flex p-3 border border-slate-300 rounded-full bg-secondary text-white transition-all duration-200 mx-1 hover:border-orange-400 hover:bg-secondaryMuda;
+}
+
+.portfolio-card {
+  @apply w-full md:w-[47%] lg:w-[32%] border-2 border-slate-600 my-4 md:my-0;
+}
+
+.portfolio-img {
+  @apply border-b border-b-slate-300 cursor-pointer;
+}
+
+.title-desc {
+  @apply text-lg md:text-xl font-medium md:font-semibold mb-3;
+}
+
+.desc {
+  @apply text-sm md:text-base text-dark leading-relaxed my-4;
 }
