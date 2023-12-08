@@ -6,21 +6,26 @@
   <title>Landing Page</title>
   <link rel="stylesheet" href="dist/css/style.css">
 </head>
-<body>
+<body class="dark:bg-slate-900">
 
 
   <!-- Nav Start -->
-  <nav class="flex justify-between items-center fixed top-0 left-0 w-full p-4 bg-white bg-opacity-80 z-10 md:p-3 md:justify-around">
-    <span type="button" class="text-lg md:text-xl font-bold">LandingPage</span>
+  <nav class="flex justify-between items-center fixed top-0 left-0 w-full p-4 bg-white bg-opacity-80 z-10 md:p-3 md:justify-around dark:bg-darkBg dark:bg-opacity-80">
+    <span type="button" class="text-lg md:text-xl font-bold dark:text-light duration-300">LandingPage</span>
     <button id="hamburger" type="button" class="relative md:hidden cursor-pointer">
       <span class="hamburger-line origin-top-left"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line origin-bottom-left"></span>
     </button>
     <ul id="navbar" class="navbar scale-0 md:scale-100">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#home" class="nav-link active:text-primary hover:text-primary dark:active:text-primaryMuda dark:hover:text-primaryMuda">Home</a></li>
+      <li><a href="#about" class="nav-link active:text-secondary hover:text-secondary dark:active:text-secondaryMuda dark:hover:text-secondaryMuda">About</a></li>
+      <li><a href="#portfolio" class="nav-link active:text-tiga hover:text-tiga dark:active:text-tigaMuda dark:hover:text-tigaMuda">Portfolio</a></li>
+      <li class="nav-link">
+        <div class="mode-toggle w-11 h-6 bg-dark dark:bg-light rounded-full cursor-pointer p-1">
+          <div class="mode-toggle-circle w-4 h-4 rounded-full bg-white dark:bg-darkBgMuda translate-x-0 duration-300"></div>
+        </div>
+      </li>
     </ul>
   </nav>
   <!-- Nav End -->
@@ -28,24 +33,24 @@
 
 
   <!-- Hero Section Start -->
-  <section id="home" class="transition-all duration-500">
-    <div class="container py-20 md:pb-40 mx-auto border-b border-b-slate-30">
+  <section id="home">
+    <div class="container py-20 md:pb-40 mx-auto border-b border-b-slate-300 dark:border-b-darkBgMuda">
       <div class="flex flex-wrap md:justify-around md:items-center">
 
         <div class="w-full px-4 md:w-1/2">
-          <h2 class="title-desc text-primary">Hallo saya,<span class="text-3xl md:text-4xl block font-bold text-dark">Adi Permadi</span></h2>
-          <h3 class="text-sm md:text-md text-dark bg-slate-300 w-max pl-2 pr-4 rounded-r-full py-1 rounded-md">Pelajar & Gamer</h3>
+          <h2 class="title-desc text-primary dark:text-primaryMuda">Hallo saya,<span class="text-3xl md:text-4xl block font-bold text-dark dark:text-light">Adi Permadi</span></h2>
+          <h3 class="text-sm md:text-md text-dark bg-slate-300 w-max pl-2 pr-4 rounded-r-full py-1 rounded-md dark:bg-slate-700 dark:text-light">Pelajar & Gamer</h3>
           <p class="desc">
             Hallo senang kamu melihat halaman ini, belajar membuat web itu lumayan menantang, saya harap kamu suka dengan tema yang saya gunakan.
           </p>
-          <a href="#about" class="text-base font-semibold bg-primary hover:bg-primaryMuda transition-all duration-500 px-6 py-2.5 rounded-lg text-white hover:rounded-3xl block w-max">Tentang Saya</a>
+          <a href="#about" class="text-base font-semibold bg-primary hover:bg-primaryMuda px-6 py-2.5 rounded-lg text-white hover:rounded-3xl block w-max">Tentang Saya</a>
         </div>
 
-        <div class="w-full border-b border-slate-300 rounded-full md:mt-5 md:w-1/3 md:border-t shadow-lg md:shadow-xl pt-10 md:pt-0 overflow-y-hidden">
+        <div class="w-full border-b border-slate-300 rounded-full md:mt-5 md:w-1/3 md:border-t shadow-lg md:shadow-xl pt-10 md:pt-0 overflow-y-hidden dark:shadow-darkBgMuda dark:border-darkBgMuda dark:bg-darkBgMuda dark:bg-opacity-5">
 
           <div class="w-full relative overflow-hidden rounded-full">
             <img src="dist/img/adi.png" class="mx-auto w-80">
-            <span class="absolute top-0 right-0 left-0 bottom-0 -z-10 -translate-y-10 sm:scale-75 sm:-translate-y-20 transition-all duration-300 md:scale-110 md:translate-y-0">
+            <span class="absolute top-0 right-0 left-0 bottom-0 -z-10 -translate-y-10 sm:scale-75 sm:-translate-y-20  md:scale-110 md:translate-y-0">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#0284c7" d="M35,-51.2C49.7,-45,69,-42.7,75,-33.2C81.1,-23.7,73.8,-7.1,70.4,9.5C67,26,67.5,42.5,59.7,52C51.9,61.6,35.8,64.2,20.8,66.7C5.8,69.2,-8,71.7,-21.2,69.2C-34.5,66.8,-47.2,59.3,-57.7,49C-68.3,38.7,-76.7,25.4,-81,10.3C-85.2,-4.8,-85.3,-21.9,-77.9,-34.5C-70.5,-47.1,-55.6,-55.2,-41.3,-61.7C-27.1,-68.1,-13.6,-73,-1.7,-70.3C10.1,-67.6,20.3,-57.4,35,-51.2Z" transform="translate(100 100)" />
               </svg>
@@ -69,27 +74,27 @@
 
 
   <!-- About Section Start -->
-  <section id="about" class="transition-all duration-500">
-    <div class="container mx-auto md:px-12 pt-20 md:pt-24 border-b border-b-slate-300 pb-6">
+  <section id="about">
+    <div class="container mx-auto md:px-12 pt-20 md:pt-24 border-b border-b-slate-300 py-40 dark:border-b-darkBgMuda">
       <div class="flex flex-wrap justify-center items-start">
 
         <div class="w-full px-4 md:w-1/2">
-          <h2 class="title-desc text-secondary">Tentang Saya</h2>
-          <h2 class="text-2xl font-bold mb-3">Sedikit Perkenalan</h2>
+          <h2 class="title-desc text-secondary dark:text-secondaryMuda">Tentang Saya</h2>
+          <h2 class="text-2xl font-bold mb-3 dark:text-light">Sedikit Perkenalan</h2>
           <p class="desc">
             Saya adalah seorang siswa SMK yang saat ini sudah memasuki semester terakhir di kelas <span class="font-bold">XII</span> jurusan <span class="font-bold ">Teknik Komputer Jaringan</span>. saat ini saya sedang belajar front end web dev diseling bermain mobile legends di kesehariannya. kalau mau mabar sini aja, btw gw all role yah.
           </p>
 
-          <button class="text-base font-semibold bg-secondary hover:bg-secondaryMuda transition-all duration-500 px-6 py-2.5 rounded-lg text-white hover:rounded-[30px] active:rounded-[30px] block w-max my-4 mabar">Hayyuk Mabar ML</button>
+          <button class="text-base font-semibold bg-secondaryMuda hover:bg-secondary px-6 py-2.5 rounded-lg text-white hover:rounded-[30px] active:rounded-[30px] block w-max my-4 mabar">Hayyuk Mabar ML</button>
         </div>
 
         <div class="w-full px-4 md:w-1/2 pt-[39px] flex flex-wrap">
           <div class="w-full">
-            <h2 class="text-2xl font-bold mb-2">Mari Berteman</h2>
+            <h2 class="text-2xl font-bold mb-2 dark:text-light">Mari Berteman</h2>
             <p class="desc">Meski kita gak saling kenal, ada baiknya kita menyambung silaturahmi dengan saling follow medsos kita, tenang aja gw gak akan pinjam seratus kok.</p>
           </div>
 
-          <div class="flex py-2 justify-center items-center border border-slate-300 rounded-full w-full mt-12">
+          <div class="flex py-1 justify-center items-center rounded-full w-full">
 
             <!-- Tiktok -->
 
@@ -115,10 +120,10 @@
 
   <!-- Portfolio Section Start -->
   <section id="portfolio">
-    <div class="container mx-auto py-36 px-4">
+    <div class="container mx-auto py-36 px-4 border-b border-b-slate-300 dark:border-b-darkBgMuda">
 
-      <h2 class="title-desc text-tiga text-center">Portolio Saya</h2>
-      <h3 class="text-2xl font-bold mb-3 text-center">Project Sederhana</h3>
+      <h2 class="title-desc text-tiga text-center dark:text-tigaMuda">Portolio Saya</h2>
+      <h3 class="text-2xl font-bold mb-3 text-center dark:text-light">Project Sederhana</h3>
       <p class="desc text-center mb-40">
         Sembari saya belajar disaat yang bersamaan saya mengimplementasikan hasil pembelajaran saya ke dalam project-project kecil yang saya buat.
       </p>
@@ -128,63 +133,78 @@
         <!-- Express Contact App -->
 
         <div class="portfolio-card">
+
           <div class="w-full overflow-hidden shadow">
             <img src="dist/img/express-contact-app.png" class="portfolio-img">
           </div>
-          <div class="px-4 py-3 relative">
-            <h2 class="text-lg font-bold mt-4 mb-2">Express Contact App</h2>
-            <p class="desc">Express Contact App adalah web sederhana sebagai implementasi ilmu yang saya dapatkan setelah belajar nodejs, expressjs, dan tailwindcss.</p>
 
-            <div class="flex absolute top-3 right-3 gap-1">
-              <a href="https://github.com/dprmd/express-contact-app" target="_blank" class="w-6 h-6 rounded-full">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              </a>
-            </div>
+          <div class="px-4 pt-4 pb-10">
+            <h2 class="title-desc dark:text-light">
+              Express Contact App
+            </h2>
+            <p class="desc">
+              Express Contact App adalah web sederhana sebagai implementasi ilmu yang saya dapatkan setelah belajar nodejs, expressjs, dan tailwindcss.
+            </p>
+          </div>
 
+          <div class="link-to-project">
+            <a href="https://github.com/dprmd/express-contact-app" target="_blank" class="link-to-project-wrapper">
+              <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
           </div>
         </div>
 
         <!-- Gallery Tailwind -->
 
         <div class="portfolio-card">
+
           <div class="w-full overflow-hidden shadow">
             <img src="dist/img/gallery-tailwind.png" class="portfolio-img">
           </div>
-          <div class="px-4 py-3 relative">
-            <h2 class="text-lg font-bold mt-4 mb-2">Gallery Tailwind</h2>
-            <p class="desc">Gallery Tailwind adalah project membuat gallery untuk mengerjakan tugas ke-1 dari channel telegram KelasFullStack.</p>
 
-            <div class="flex absolute top-3 right-3 gap-1">
-              <a href="https://github.com/dprmd/gallery-tailwind" target="_blank" class="w-6 h-6 rounded-full">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              </a>
-              <a href="https://dprmd.github.io/gallery-tailwind" target="_blank" class="w-6 h-6 rounded-full">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di Browser</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>
-              </a>
-            </div>
+          <div class="px-4 pt-4 pb-20">
+            <h2 class="title-desc dark:text-light">
+              Gallery Tailwind
+            </h2>
+            <p class="desc">
+              Gallery Tailwind adalah project membuat gallery untuk mengerjakan tugas ke-1 dari channel telegram KelasFullStack.
+            </p>
+          </div>
 
+          <div class="link-to-project">
+            <a href="https://github.com/dprmd/gallery-tailwind" target="_blank" class="link-to-project-wrapper">
+              <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://dprmd.github.io/gallery-tailwind" target="_blank" class="link-to-project-wrapper">
+              <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di Browser</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>
+            </a>
           </div>
         </div>
 
         <!-- Landing Page Tailwind -->
 
         <div class="portfolio-card">
+
           <div class="w-full overflow-hidden shadow">
             <img src="dist/img/landing-page-tailwind.png" class="portfolio-img">
           </div>
-          <div class="px-4 py-3 relative">
-            <h2 class="text-lg font-bold mt-4 mb-2">Landing Page Tailwind</h2>
-            <p class="desc">Landing Page Tailwind adalah web portfolio sederhana dengan mengikuti tutorial pak sandhika galih.</p>
 
-            <div class="flex absolute top-3 right-3 gap-1">
-              <a href="https://github.com/dprmd/landing-page-tailwind" target="_blank" class="w-6 h-6 rounded-full">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              </a>
-              <a href="https://dprmd.github.io/landing-page-tailwind" target="_blank" class="w-6 h-6 rounded-full">
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di Browser</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>
-              </a>
-            </div>
+          <div class="px-4 pt-4 pb-20">
+            <h2 class="title-desc dark:text-light">
+              Landing Page Tailwind
+            </h2>
+            <p class="desc">
+              Landing Page Tailwind adalah web portfolio sederhana dengan mengikuti tutorial pak sandhika galih.
+            </p>
+          </div>
 
+          <div class="link-to-project">
+            <a href="https://github.com/dprmd/landing-page-tailwind" target="_blank" class="link-to-project-wrapper">
+              <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://dprmd.github.io/landing-page-tailwind" target="_blank" class="link-to-project-wrapper">
+              <svg role="img" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lihat Di Browser</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg>
+            </a>
           </div>
         </div>
 

@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   font-family: "Inter", sans-serif;
 }
 
 .debug {
-  border: 2px solid black;
+  @apply border-2 border-black dark:border-white;
 }
 
 .navbar {
-  @apply absolute shadow-lg right-0 top-full w-1/2 flex-col py-3 px-5 text-center transition-all duration-500 bg-white md:flex md:flex-row md:static md:py-0 md:px-0 md:justify-end md:bg-opacity-0 md:shadow-none;
+  @apply absolute shadow-lg right-0 top-full w-1/2 flex-col py-3 px-5 duration-500 bg-slate-100 md:flex md:flex-row md:static md:py-0 md:px-0 md:justify-end md:items-center md:bg-opacity-0 md:shadow-none dark:bg-darkBgMuda dark:md:bg-opacity-0;
 }
 
 .navbar > li {
@@ -28,16 +27,16 @@ body {
 }
 
 .nav-link {
-  @apply block font-medium py-2 duration-300 my-3 active:text-primary hover:text-primary md:my-0 md:px-2 md:text-sm;
+  @apply font-medium py-2 my-3 md:my-0 md:px-2 md:text-sm flex justify-center text-dark dark:text-light;
 }
 
 .nav-scrooled {
-  @apply shadow;
+  @apply shadow dark:shadow-darkBgMuda;
   backdrop-filter: blur(5px);
 }
 
 .hamburger-line {
-  @apply block w-5 h-0.5 bg-dark my-1 transition duration-300;
+  @apply block w-5 h-0.5 bg-dark my-1 dark:bg-light duration-500 transition-all;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -53,11 +52,11 @@ body {
 }
 
 .sosmed-icon {
-  @apply flex p-3 border border-slate-300 rounded-full bg-secondary text-white transition-all duration-200 mx-1 hover:border-orange-400 hover:bg-secondaryMuda;
+  @apply flex p-3 border border-slate-300 rounded-full bg-secondary text-white mx-1 hover:border-orange-400 hover:bg-secondaryMuda dark:bg-secondaryMuda dark:hover:bg-secondary dark:border-dark duration-300;
 }
 
 .portfolio-card {
-  @apply w-full md:w-[47%] lg:w-[32%] border-2 border-slate-600 my-4 md:my-0;
+  @apply w-full md:w-[47%] lg:w-[32%] border-2 border-slate-600 my-4 md:my-0 dark:border-slate-500 dark:bg-darkBgMuda relative;
 }
 
 .portfolio-img {
@@ -65,9 +64,17 @@ body {
 }
 
 .title-desc {
-  @apply text-lg md:text-xl font-medium md:font-semibold mb-3;
+  @apply text-lg md:text-xl font-medium md:font-bold my-3;
 }
 
 .desc {
-  @apply text-sm md:text-base text-dark leading-relaxed my-4;
+  @apply text-sm md:text-base text-dark leading-relaxed my-4 dark:text-light;
+}
+
+.link-to-project {
+  @apply w-full flex gap-3 text-dark dark:text-light justify-center absolute bottom-0 border-t border-t-dark dark:border-t-slate-500 py-2;
+}
+
+.link-to-project-wrapper {
+  @apply w-6 h-6 rounded-full;
 }

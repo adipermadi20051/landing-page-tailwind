@@ -1,3 +1,5 @@
+const html = document.querySelector("html")
+
 // Hamburger 
 
 const hamburger = document.querySelector("#hamburger")
@@ -32,3 +34,14 @@ window.onscroll = () => {
     nav.classList.remove("nav-scrooled")
   }
 }
+
+// Dark Mode
+
+const modeToggle = document.querySelector(".mode-toggle")
+const modeToggleCircle = document.querySelector(".mode-toggle-circle")
+
+modeToggle.addEventListener("click", () => {
+  html.classList.toggle("dark")
+  modeToggleCircle.classList.toggle("translate-x-0")
+  modeToggleCircle.classList.toggle("translate-x-5")
+})
