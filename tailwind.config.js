@@ -11,11 +11,14 @@ module.exports = {
         secondary: "#c2410c",
         secondaryMuda: "#f97316",
 
-        tiga: "#0f766e",
-        tigaMuda: "#14b8a6",
+        tiga: "#b91c1c",
+        tigaMuda: "#ef4444",
 
-        empat: "#a21caf",
-        empatMuda: "#d946ef",
+        empat: "#15803d",
+        empatMuda: "#22c55e",
+
+        lima: "#a21caf",
+        limaMuda: "#d946ef",
 
         light: "#e2e8f0",
         dark: "#0f172a",
@@ -25,7 +28,8 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        josefin: ["Josefin Sans", "sans-serif"]
+        josefin: ["Josefin Sans", "sans-serif"],
+        rethink: ["Rethink Sans", "sans-serif"]
       }
     },
   },

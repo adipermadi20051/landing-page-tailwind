@@ -1,16 +1,5 @@
 const html = document.querySelector("html")
 
-// Hamburger 
-
-const hamburger = document.querySelector("#hamburger")
-const navbar = document.querySelector("#navbar")
-
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("scale-0")
-  navbar.classList.toggle("scale-100")
-  hamburger.classList.toggle("hamburger-active")
-})
-
 // Mabar
 
 const mabar = document.querySelector(".mabar")
@@ -31,25 +20,12 @@ messageOk.addEventListener("click", () => {
 
 mabar.addEventListener("click", () => {
   const mabarML = `
-  <h3 class="text-lg font-bold">Hayyuk Mabar ML</h3>
+  <h3 class="text-lg font-bold">Hayyuk Mabar ML</h3> <br>
+  <p class="text-md font-medium">ID       : 490245606</p>
   <p class="text-md font-medium">USERNAME : Arrumijen</p>
-  <p class="text-md font-medium">ID GW    : 490245606</p>
 `
   renderMessage(mabarML)
 })
-
-// Navbar Sticky
-
-window.onscroll = () => {
-  const nav = document.querySelector("nav")
-  const navSticky = nav.offsetTop;
-
-  if (window.pageYOffset > navSticky) {
-    nav.classList.add("nav-scrooled")
-  } else {
-    nav.classList.remove("nav-scrooled")
-  }
-}
 
 // Dark Mode
 
@@ -77,4 +53,48 @@ else switchTheme("dark")
 modeToggle.addEventListener("click", () => {
   if (localStorage.getItem("theme") === "light") switchTheme("dark")
   else switchTheme("light")
+})
+
+// Navbar Sticky And Scrool To Top
+
+window.onscroll = () => {
+  const nav = document.querySelector("nav")
+  const navSticky = nav.offsetTop
+
+  const about = document.querySelector("#about")
+  const aboutPosition = about.offsetTop
+  const ScroolToTop = document.querySelector("#scrool-to-top")
+
+  if (window.pageYOffset > aboutPosition) {
+    ScroolToTop.classList.remove("hidden")
+  } else {
+    ScroolToTop.classList.add("hidden")
+  }
+
+  if (window.pageYOffset > navSticky ) {
+    nav.classList.add("nav-scrooled")
+  } else {
+    nav.classList.remove("nav-scrooled")
+  }
+  
+}
+
+
+// Hamburger 
+
+const hamburger = document.querySelector("#hamburger")
+const navbar = document.querySelector("#navbar")
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("scale-0")
+  navbar.classList.toggle("scale-100")
+  hamburger.classList.toggle("hamburger-active")
+})
+
+document.addEventListener("click", (e) => {
+  if (e.target !== hamburger && e.target !== navbar && hamburger.classList.contains("hamburger-active")) {
+    navbar.classList.remove("scale-100")
+    navbar.classList.add("scale-0")
+    hamburger.classList.remove("hamburger-active")
+  }
 })

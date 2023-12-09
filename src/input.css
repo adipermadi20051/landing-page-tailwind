@@ -27,7 +27,7 @@ body {
 }
 
 .nav-link {
-  @apply font-medium py-2 my-3 md:my-0 md:px-2 md:text-sm flex justify-center text-dark dark:text-light transition-all duration-300;
+  @apply font-medium py-2 my-3 md:my-0 md:px-2 md:text-sm flex justify-center text-dark dark:text-light transition-all duration-300 md:w-max;
 }
 
 .nav-scrooled {
@@ -79,7 +79,7 @@ body {
 }
 
 .message-bg {
-  @apply w-screen h-screen fixed overflow-hidden bg-slate-500 bg-opacity-50 dark:bg-slate-700 dark:bg-opacity-50 top-0 left-0 right-0 z-20 justify-center items-center;
+  @apply w-screen h-screen fixed overflow-hidden top-0 left-0 right-0 z-20 justify-center items-center bg-white bg-opacity-50 dark:bg-darkBgMuda dark:bg-opacity-50 backdrop-blur-sm;
 }
 
 .message-box {
@@ -92,4 +92,16 @@ body {
 
 .message-ok {
   @apply bg-primary text-light font-bold  text-lg px-6 py-2 rounded-lg hover:bg-primaryMuda dark:bg-primaryMuda dark:hover:bg-primary transition duration-500;
+}
+
+.myskill-wrapper li {
+  @apply w-[70px] fill-current p-3 cursor-text;
+}
+
+.follow-my-sosmed {
+  @apply w-full border border-slate-400 dark:border-slate-500 rounded-xl flex p-4 gap-4 justify-center;
+}
+
+.follow-my-sosmed li {
+  @apply fill-current w-6;
 }
