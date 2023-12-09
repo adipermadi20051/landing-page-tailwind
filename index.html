@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
+
+  <!-- Fonts Google -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Tailwind -->
   <link rel="stylesheet" href="dist/css/style.css">
+
 </head>
 <body class="dark:bg-slate-900">
 
+  <!-- Reusable Message Box -->
+  <div class="message-bg hidden">
+    <div class="message-box">
+      <div class="message"></div>
+      <div class="flex justify-center gap-x-2">
+        <button class="message-ok bg-primary text-light font-bold  text-lg px-6 py-2 rounded-lg hover:bg-primaryMuda dark:bg-primaryMuda dark:hover:bg-primary transition duration-500">Baiklah</button>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Nav Start -->
-  <nav class="flex justify-between items-center fixed top-0 left-0 w-full p-4 bg-white bg-opacity-80 z-10 md:p-3 md:justify-around dark:bg-darkBg dark:bg-opacity-80">
+  <nav class="flex justify-between items-center fixed top-0 left-0 w-full p-4 bg-white bg-opacity-80 z-10 md:p-3 md:justify-around dark:bg-darkBg dark:bg-opacity-80 font-poppins">
     <span type="button" class="text-lg md:text-xl font-bold dark:text-light duration-300">LandingPage</span>
-    <button id="hamburger" type="button" class="relative md:hidden cursor-pointer">
+    <div id="hamburger" class="relative md:hidden cursor-pointer">
       <span class="hamburger-line origin-top-left"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line origin-bottom-left"></span>
-    </button>
+    </div>
     <ul id="navbar" class="navbar scale-0 md:scale-100">
       <li><a href="#home" class="nav-link active:text-primary hover:text-primary dark:active:text-primaryMuda dark:hover:text-primaryMuda">Home</a></li>
       <li><a href="#about" class="nav-link active:text-secondary hover:text-secondary dark:active:text-secondaryMuda dark:hover:text-secondaryMuda">About</a></li>
       <li><a href="#portfolio" class="nav-link active:text-tiga hover:text-tiga dark:active:text-tigaMuda dark:hover:text-tigaMuda">Portfolio</a></li>
+      <li><a href="#contact" class="nav-link active:text-empat hover:text-empat dark:active:text-empatMuda dark:hover:text-empatMuda">Contact</a></li>
       <li class="nav-link">
-        <div class="mode-toggle w-11 h-6 bg-dark dark:bg-light rounded-full cursor-pointer p-1">
-          <div class="mode-toggle-circle w-4 h-4 rounded-full bg-white dark:bg-darkBgMuda translate-x-0 duration-300"></div>
+        <div class="mode-toggle w-11 h-6 bg-dark dark:bg-light rounded-full cursor-pointer p-1 relative">
+          <div class="mode-toggle-circle w-4 h-4 rounded-full bg-white dark:bg-darkBgMuda absolute">
+          </div>
         </div>
       </li>
     </ul>
@@ -39,11 +61,11 @@
 
         <div class="w-full px-4 md:w-1/2">
           <h2 class="title-desc text-primary dark:text-primaryMuda">Hallo saya,<span class="text-3xl md:text-4xl block font-bold text-dark dark:text-light">Adi Permadi</span></h2>
-          <h3 class="text-sm md:text-md text-dark bg-slate-300 w-max pl-2 pr-4 rounded-r-full py-1 rounded-md dark:bg-slate-700 dark:text-light">Pelajar & Gamer</h3>
+          <h3 class="text-sm md:text-md text-dark bg-slate-300 w-max pl-2 pr-4 rounded-r-full py-1 rounded-md dark:bg-slate-700 dark:text-light font-poppins">Pelajar & Gamer</h3>
           <p class="desc">
             Hallo senang kamu melihat halaman ini, belajar membuat web itu lumayan menantang, saya harap kamu suka dengan tema yang saya gunakan.
           </p>
-          <a href="#about" class="text-base font-semibold bg-primary hover:bg-primaryMuda px-6 py-2.5 rounded-lg text-white hover:rounded-3xl block w-max">Tentang Saya</a>
+          <a href="#about" class="text-base font-semibold bg-primary hover:bg-primaryMuda px-6 py-2.5 rounded-lg text-white hover:rounded-3xl block w-max transition-all duration-500 dark:bg-primaryMuda dark:hover:bg-primary">Tentang Saya</a>
         </div>
 
         <div class="w-full border-b border-slate-300 rounded-full md:mt-5 md:w-1/3 md:border-t shadow-lg md:shadow-xl pt-10 md:pt-0 overflow-y-hidden dark:shadow-darkBgMuda dark:border-darkBgMuda dark:bg-darkBgMuda dark:bg-opacity-5">
@@ -85,12 +107,12 @@
             Saya adalah seorang siswa SMK yang saat ini sudah memasuki semester terakhir di kelas <span class="font-bold">XII</span> jurusan <span class="font-bold ">Teknik Komputer Jaringan</span>. saat ini saya sedang belajar front end web dev diseling bermain mobile legends di kesehariannya. kalau mau mabar sini aja, btw gw all role yah.
           </p>
 
-          <button class="text-base font-semibold bg-secondaryMuda hover:bg-secondary px-6 py-2.5 rounded-lg text-white hover:rounded-[30px] active:rounded-[30px] block w-max my-4 mabar">Hayyuk Mabar ML</button>
+          <button class="text-base font-semibold bg-secondary hover:bg-secondaryMuda dark:bg-secondaryMuda dark:hover:bg-secondary px-6 py-2.5 rounded-lg text-white hover:rounded-[30px] active:rounded-[30px] block w-max my-4 mabar transition-all duration-500">Hayyuk Mabar ML</button>
         </div>
 
-        <div class="w-full px-4 md:w-1/2 pt-[39px] flex flex-wrap">
+        <div class="w-full px-4 md:w-1/2 flex flex-wrap">
           <div class="w-full">
-            <h2 class="text-2xl font-bold mb-2 dark:text-light">Mari Berteman</h2>
+            <h2 class="text-2xl font-bold mb-3 dark:text-light mt-[53px]">Mari Berteman</h2>
             <p class="desc">Meski kita gak saling kenal, ada baiknya kita menyambung silaturahmi dengan saling follow medsos kita, tenang aja gw gak akan pinjam seratus kok.</p>
           </div>
 
@@ -122,11 +144,13 @@
   <section id="portfolio">
     <div class="container mx-auto py-36 px-4 border-b border-b-slate-300 dark:border-b-darkBgMuda">
 
-      <h2 class="title-desc text-tiga text-center dark:text-tigaMuda">Portolio Saya</h2>
-      <h3 class="text-2xl font-bold mb-3 text-center dark:text-light">Project Sederhana</h3>
-      <p class="desc text-center mb-40">
-        Sembari saya belajar disaat yang bersamaan saya mengimplementasikan hasil pembelajaran saya ke dalam project-project kecil yang saya buat.
-      </p>
+      <div class="px-4">
+        <h2 class="title-desc text-tiga text-center dark:text-tigaMuda">Portolio Saya</h2>
+        <h3 class="text-2xl font-bold mb-3 text-center dark:text-light">Project Sederhana</h3>
+        <p class="desc text-center mb-40">
+          Sembari saya belajar disaat yang bersamaan saya mengimplementasikan hasil pembelajaran saya ke dalam project-project kecil yang saya buat.
+        </p>
+      </div>
 
       <div class="flex flex-wrap px-4 mt-20 md:justify-around lg:justify-between gap-2 lg:gap-y-6">
 
@@ -215,7 +239,45 @@
 
 
 
-  <div class="mt-96"></div>
+  <!-- Contact Section Start -->
+  <section id="contact" class="scroll-smooth">
+    <div class="container mx-auto pt-24 pb-20 border-b border-b-slate-300 dark:border-b-darkBgMuda">
+
+      <div class="px-4">
+        <h2 class="title-desc text-empat text-center dark:text-empatMuda">Contact Saya</h2>
+        <h3 class="text-2xl font-bold mb-3 text-center dark:text-light">Hubungi Saya</h3>
+        <p class="desc text-center mb-40">
+          Jika kamu punya kritik dan saran dalam pengembangan website ini, silakan hubungi saya melalui form di bawah.
+        </p>
+      </div>
+
+      <div class="md:w-[70%] lg:w-1/2 p-2 rounded-xl mx-4 md:mx-auto">
+        <form class="">
+
+          <div class="py-2 flex flex-col px-4">
+            <label for="nama" class="font-semibold text-lg text-empat dark:text-empatMuda mb-1">Nama</label>
+            <input type="text" name="nama" id="nama" class="outline-none rounded-md bg-empat bg-opacity-30 focus:ring-2 focus:ring-empat px-3 py-2 dark:bg-empat dark:bg-opacity-30 dark:text-light dark:ring-empatMuda">
+          </div>
+
+          <div class="py-2 flex flex-col px-4">
+            <label for="email" class="font-semibold text-lg text-empat dark:text-empatMuda mb-1">Email</label>
+            <input type="email" name="email" id="email" class="outline-none rounded-md bg-empat bg-opacity-30 focus:ring-2 focus:ring-empat px-3 py-2 dark:bg-empat dark:bg-opacity-30 dark:text-light dark:ring-empatMuda">
+          </div>
+
+          <div class="py-2 flex flex-col px-4">
+            <label for="pesan" class="font-semibold text-lg text-empat dark:text-empatMuda mb-1">Pesan</label>
+            <textarea name="pesan" id="pesan" rows="5" class="outline-none rounded-md bg-empat bg-opacity-30 focus:ring-2 focus:ring-empat px-3 py-2 dark:bg-empat dark:bg-opacity-30 dark:text-light dark:ring-empatMuda"></textarea>
+          </div>
+
+          <div class="py-2 px-4 mt-2">
+            <button type="button" class="font-bold text-md md:text-lg w-full py-3 rounded-full hover:bg-empatMuda dark:hover:bg-empat text-light bg-empat dark:bg-empatMuda transition duration-300">Kirim</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+  <!-- Contact Section End -->
 
   <script src="dist/js/script.js"></script>
 </body>
