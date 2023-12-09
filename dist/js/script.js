@@ -85,14 +85,17 @@ window.onscroll = () => {
 const hamburger = document.querySelector("#hamburger")
 const navbar = document.querySelector("#navbar")
 
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("scale-0")
-  navbar.classList.toggle("scale-100")
-  hamburger.classList.toggle("hamburger-active")
-})
-
 document.addEventListener("click", (e) => {
-  if (e.target !== hamburger && e.target !== navbar && hamburger.classList.contains("hamburger-active")) {
+  if (
+    e.target.classList.contains("hamburger") ||
+    e.target.classList.contains("hamburger-line")) {
+      navbar.classList.toggle("scale-0")
+      navbar.classList.toggle("scale-100")
+      hamburger.classList.toggle("hamburger-active")
+  }
+  if (e.target !== hamburger &&
+    e.target !== navbar &&
+    hamburger.classList.contains("hamburger-active")) {
     navbar.classList.remove("scale-100")
     navbar.classList.add("scale-0")
     hamburger.classList.remove("hamburger-active")
