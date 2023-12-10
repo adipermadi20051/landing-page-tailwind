@@ -594,8 +594,8 @@ video {
   bottom: 0.25rem;
 }
 
-.bottom-6 {
-  bottom: 1.5rem;
+.bottom-8 {
+  bottom: 2rem;
 }
 
 .left-0 {
@@ -614,8 +614,8 @@ video {
   right: 0.25rem;
 }
 
-.right-6 {
-  right: 1.5rem;
+.right-4 {
+  right: 1rem;
 }
 
 .top-0 {
@@ -720,20 +720,12 @@ video {
   height: 1rem;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-6 {
   height: 1.5rem;
 }
 
 .h-\[1px\] {
   height: 1px;
-}
-
-.w-1 {
-  width: 0.25rem;
 }
 
 .w-11 {
@@ -761,26 +753,12 @@ video {
   transform-origin: bottom left;
 }
 
-.origin-bottom-right {
-  transform-origin: bottom right;
-}
-
 .origin-top-left {
   transform-origin: top left;
 }
 
 .-translate-y-10 {
   --tw-translate-y: -2.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-rotate-45 {
-  --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-45 {
-  --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1693,7 +1671,8 @@ body {
   border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
-.follow-my-sosmed li {
+.follow-my-sosmed li a {
+  display: block;
   width: 1.5rem;
   fill: currentColor;
 }

@@ -102,6 +102,6 @@ body {
   @apply w-full border border-slate-400 dark:border-slate-500 rounded-xl flex p-4 gap-4 justify-center;
 }
 
-.follow-my-sosmed li {
-  @apply fill-current w-6;
+.follow-my-sosmed li a {
+  @apply block fill-current w-6;
 }
