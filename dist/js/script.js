@@ -1,3 +1,5 @@
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
 const html = document.querySelector("html")
 
 // Mabar
@@ -71,10 +73,12 @@ window.onscroll = () => {
     ScroolToTop.classList.add("hidden")
   }
 
-  if (window.pageYOffset > navSticky ) {
+  if (window.pageYOffset > navSticky) {
+    nav.classList.remove("dark:bg-gradient-to-br")
     nav.classList.add("nav-scrooled")
   } else {
     nav.classList.remove("nav-scrooled")
+    nav.classList.add("dark:bg-gradient-to-br")
   }
   
 }
@@ -85,19 +89,17 @@ window.onscroll = () => {
 const hamburger = document.querySelector("#hamburger")
 const navbar = document.querySelector("#navbar")
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", async (e) => {
   if (
     e.target.classList.contains("hamburger") ||
     e.target.classList.contains("hamburger-line")) {
-      navbar.classList.toggle("scale-0")
-      navbar.classList.toggle("scale-100")
-      hamburger.classList.toggle("hamburger-active")
+    navbar.classList.toggle("translate-x-full")
+    hamburger.classList.toggle("hamburger-active")
   }
   if (e.target !== hamburger &&
     e.target !== navbar &&
     hamburger.classList.contains("hamburger-active")) {
-    navbar.classList.remove("scale-100")
-    navbar.classList.add("scale-0")
+    navbar.classList.add("translate-x-full")
     hamburger.classList.remove("hamburger-active")
   }
 })

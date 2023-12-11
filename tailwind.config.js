@@ -24,7 +24,9 @@ module.exports = {
         dark: "#0f172a",
 
         darkBg: "#0f172a",
-        darkBgMuda: "#1e293b"
+        darkBgMuda: "#1e293b",
+
+        darkGradient: "#172554"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -31,7 +31,7 @@ body {
 }
 
 .nav-scrooled {
-  @apply shadow dark:shadow-darkBgMuda backdrop-blur-sm;
+  @apply shadow dark:shadow-darkBgMuda dark:bg-darkBg dark:bg-opacity-80 backdrop-blur-sm;
 }
 
 .hamburger-line {
