@@ -79,7 +79,7 @@ body {
 }
 
 .message-bg {
-  @apply w-screen h-screen fixed overflow-hidden top-0 left-0 right-0 z-20 justify-center items-center bg-white bg-opacity-50 dark:bg-darkBgMuda dark:bg-opacity-50 backdrop-blur-sm;
+  @apply w-screen h-screen fixed overflow-hidden top-0 left-0 right-0 z-20 justify-center items-center bg-white bg-opacity-50 dark:bg-darkBgMuda dark:bg-opacity-50 backdrop-blur-sm z-50;
 }
 
 .message-box {
