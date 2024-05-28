@@ -32,18 +32,19 @@ mabar.addEventListener("click", () => {
 // Dark Mode
 
 const modeToggle = document.querySelector(".mode-toggle");
-const modeToggleCircle = document.querySelector(".mode-toggle-circle");
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
 
 const switchTheme = (mode) => {
   if (mode === "light") {
-    modeToggleCircle.classList.remove("right-1");
-    modeToggleCircle.classList.add("left-1");
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
     localStorage.setItem("theme", "light");
     html.classList.remove("dark");
   }
   if (mode === "dark") {
-    modeToggleCircle.classList.remove("left-1");
-    modeToggleCircle.classList.add("right-1");
+    moonIcon.classList.remove("hidden");
+    sunIcon.classList.add("hidden");
     localStorage.setItem("theme", "dark");
     html.classList.add("dark");
   }
