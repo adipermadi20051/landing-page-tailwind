@@ -4,6 +4,14 @@ module.exports = {
   content: ["index.html"],
   theme: {
     extend: {
+      animation: {
+        bounce_1: 'bounce 1s ease-in-out infinite',
+        bounce_2: 'bounce 1.2s ease-in-out infinite',
+        bounce_3: 'bounce 1.4s ease-in-out infinite',
+        bounce_4: 'bounce 1.6s ease-in-out infinite',
+        bounce_5: 'bounce 1.8s ease-in-out infinite',
+        bounce_6: 'bounce 1.6s ease-in-out infinite',
+      },
       colors: {
         primary: "#0369a1",
         primaryMuda: "#0ea5e9",

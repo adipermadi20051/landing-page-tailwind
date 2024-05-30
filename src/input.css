@@ -14,15 +14,15 @@ body {
   @apply absolute shadow-lg right-0 top-full w-1/2 flex-col py-3 px-5 duration-500 bg-slate-100 md:flex md:flex-row md:static md:py-0 md:px-0 md:justify-end md:items-center md:bg-opacity-0 md:shadow-none dark:bg-darkBgMuda dark:md:bg-opacity-0;
 }
 
-.navbar > li {
+.navbar>li {
   @apply md:bg-transparent md:rounded-full md:mx-1;
 }
 
-.navbar > li:first-child {
+.navbar>li:first-child {
   @apply md:ml-0;
 }
 
-.navbar > li:last-child {
+.navbar>li:last-child {
   @apply md:mr-0;
 }
 
@@ -38,15 +38,15 @@ body {
   @apply block w-5 h-0.5 bg-dark my-1 dark:bg-light duration-500 transition-all;
 }
 
-.hamburger-active > span:nth-child(1) {
+.hamburger-active>span:nth-child(1) {
   @apply rotate-45;
 }
 
-.hamburger-active > span:nth-child(2) {
+.hamburger-active>span:nth-child(2) {
   @apply scale-0;
 }
 
-.hamburger-active > span:nth-child(3) {
+.hamburger-active>span:nth-child(3) {
   @apply -rotate-45;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .message-ok {
-  @apply bg-primary text-light font-bold  text-lg px-6 py-2 rounded-lg hover:bg-primaryMuda dark:bg-primaryMuda dark:hover:bg-primary transition duration-500;
+  @apply bg-primary text-light font-bold text-lg px-6 py-2 rounded-lg hover:bg-primaryMuda dark:bg-primaryMuda dark:hover:bg-primary transition duration-500;
 }
 
 .myskill-wrapper li {
