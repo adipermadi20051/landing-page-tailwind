@@ -1,6 +1,10 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const html = document.querySelector("html");
+const interactScroll = (tobe) => {
+  if (tobe === "hidden") document.body.style.overflow = "hidden";
+  if (tobe === "scroll") document.body.style.overflow = "scroll";
+};
 
 // Mabar
 
@@ -13,11 +17,13 @@ const renderMessage = (message) => {
   messageContainer.innerHTML = message;
   messageBg.classList.remove("hidden");
   messageBg.classList.add("flex");
+  interactScroll("hidden");
 };
 
 messageOk.addEventListener("click", () => {
   messageBg.classList.remove("flex");
   messageBg.classList.add("hidden");
+  interactScroll("scroll");
 });
 
 mabar.addEventListener("click", () => {
@@ -105,4 +111,3 @@ document.addEventListener("click", async (e) => {
     hamburger.classList.remove("hamburger-active");
   }
 });
-
